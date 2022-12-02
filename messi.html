@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LIONEL MESSI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="Messi">
+    <button onclick="diminuir()">A-</button>
+    <button onclick="aumentar()">A+</button>
+    <a href="argentina.html"><button>VOLTAR</button></a>
+        <div class="container clearfix">
+            <div class="col-6" >
+                <br><br><br>             
+                <img src="img/messi.jpg" width="325px">
+            </div>
+            <div class="col-6" id="colim">
+                   <h2>ESTATISTICAS:</h2>
+                    <ul>
+                        <li style="list-style: none;" id="idadem">IDADE : 35 ANOS  </li>
+                        <li style="list-style: none;" id="alturam">ALTURA : 170 CENTIMETROS </lil>
+                        <li style="list-style: none;" id="jogosm">JOGOS : 997  PARTIDAS </li>
+                        <li style="list-style: none;" id="golsm">GOLS : 788  GOLS </li>
+                        <li style="list-style: none;" id="assistm">ASSISTENCIAS : 289  ASSIST </li>
+                        <li style="list-style: none;" id="golselem">GOLS PELA SELEÇÃO : 93   </li>
+                        <li style="list-style: none;" id="titulosm">NUMEROS DE TITULOS : 41  </li>
+                    </ul>
+                   
+            </div>
+        </div>
+        <script src="js/SCRIPT.js"></script>
+        <script>
+                tamanho = 16;
+        function diminuir(){
+          tamanho--;
+          document.body.style.fontSize=tamanho+"px";
+        }
+        function aumentar(){
+          tamanho++;
+          document.body.style.fontSize=tamanho+"px";
+        }
+        
+        
+        var link_contraste_branco = document.querySelector('#contraste_branco')
+        var todasAsTags = document.querySelectorAll('*')
+        
+        if (link_contraste_branco != null){
+            link_contraste_branco.addEventListener('click', function(){
+                console.log(todasAsTags);
+                for(let i = 0; i< todasAsTags.length; i++){
+                    let tag = todasAsTags[i]
+            
+                    if (tag.nodeName == 'A') {
+                        tag.style.backgroundColor = 'black'
+                        tag.style.color = 'white'
+                    }else {
+                        tag.style.backgroundColor = 'white'
+                        tag.style.color = 'black'
+                    }
+                }
+            })
+        }
+        
+        //contraste preto
+        var link_contraste_preto = document.querySelector('#contraste_preto')
+        var todasAsTags = document.querySelectorAll('*')
+        if (link_contraste_preto != null){
+            link_contraste_preto.addEventListener('click', function (){
+                console.log(todasAsTags);
+                for(let i = 0; i< todasAsTags.length; i++){
+                    let tag = todasAsTags[i]
+            
+                    if (tag.nodeName == 'A'){
+                        tag.style.backgroundColor = 'white'
+                        tag.style.color = 'black'
+                    }else{
+                        tag.style.backgroundColor = 'black'
+                        tag.style.color = 'white'
+                    }
+                }
+            })
+        }
+            </script>
+</body>

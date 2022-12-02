@@ -1,0 +1,81 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+    
+
+#cavaloInicial {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(174,255,1,1) 0%, rgba(0, 100, 255, 1) 100%, rgba(9,109,121,1) 100%);   
+    color: rgb(0, 0, 0)
+    
+}
+
+#BRASIL {
+    text-align: center;
+    color:rgb(255, 255, 255);  
+    background: linear-gradient(90deg, rgba(34,139,34,1) 0%, rgba(255, 215, 0, 1) 100%, rgba(9,109,121,1) 100%); 
+    
+}
+
+
+#ARGENTINA {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(0, 100, 255, 1) 0%, rgba(255, 255, 255, 1) 100%, rgba(9,109,121,1) 100%);
+}
+#Ney {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 1) 0%, rgba(34,139,34,1) 100%, rgba(9,109,121,1) 100%);  
+}
+#Messi {
+    text-align: center;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(0, 100, 255, 1) 100%, rgba(9,109,121,1) 100%);  
+}
+
+.col-1{width: 8.33%;}
+.col-2{width: 16.66%;}
+.col-3{width: 25%;}
+.col-4{width: 33.33%;}
+.col-5{width: 41.66%;}
+.col-6{width: 50%;}
+.col-7{width: 58.33%;}
+.col-8{width:66.66% ;}
+.col-9{width:75% ;}
+.col-10{width: 83.33%;}
+.col-11{width:91.66% ;}
+.col-12{width:100% ;}
+
+
+.col-6 {
+    float: left;
+}
+
+#colim {
+    margin-top: 5%;
+    margin-left: -13%;
+}
+
+button {
+    float: right;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(174,255,1,1) 0%, rgba(0, 100, 255, 1) 100%, rgba(9,109,121,1) 100%);   
+}
+
+
+img{
+    transform: translatey(opx);
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(50px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}

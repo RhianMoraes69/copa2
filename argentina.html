@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TIME DA ARGENTINA</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="ARGENTINA">
+    <a href="#" data-contraste="1" title="Contraste Branco" id="contraste_branco"><button>Contraste Branco</button></a>    
+    <a href="#" data-contraste="2" title="Contraste Preto" id="contraste_preto"><button>Contraste Preto</button></a>
+    <button onclick="diminuir()">A-</button>
+    <button onclick="aumentar()">A+</button>
+    <a href="index.html"><button>VOLTAR</button></a>
+  
+    <div class="col-12" id="arg">
+        <h1> SELEÇÃO ARGENTINA    </h1>
+        <a href="messi.html"><img id="messi" src="img/messi.jpg" width="252px"></a>
+        <a href="dimaria.html"><img id="vini" src="img/Dimaria.jpg" width="250px"></a>
+        <a href="lautaro.html"><img id="antony" src="img/martinez.jpg" width="245px"></a>
+        <a href="romero.html"><img id="richarlison" src="img/romero.jpg" width="242px"></a>
+        <a href="depaul.html"><img id="paqueta" src="img/de paul.jpg" width="245px"></a>
+        <a href="paredes.html"><img id="fabinho" src="img/paredes.jpg" width="252px"></a>
+    </div>
+    <div class="col-12">
+            <a href="acuna.html"><img id="case" src="img/acuna.jpg" width="250px"></a>
+            <a href="ota.html"><img id="militao" src="img/ota.jpg" width="252px"></a>
+            <a href="locelso.html"><img id="silva" src="img/celso.jpg" width="254px"></a>
+            <a href="molina.html"><img id="marquinhosjpg" src="img/molina.jpg" width="251px"></a>
+            <a href="emilio.html"><img id="alisson" src="img/golero.jpg" width="253px"></a>
+        </div>
+        <script src="js/SCRIPT.js"></script>
+        
+        <script>
+                tamanho = 16;
+        function diminuir(){
+          tamanho--;
+          document.body.style.fontSize=tamanho+"px";
+        }
+        function aumentar(){
+          tamanho++;
+          document.body.style.fontSize=tamanho+"px";
+        }
+        
+        
+        var link_contraste_branco = document.querySelector('#contraste_branco')
+        var todasAsTags = document.querySelectorAll('*')
+        
+        if (link_contraste_branco != null){
+            link_contraste_branco.addEventListener('click', function(){
+                console.log(todasAsTags);
+                for(let i = 0; i< todasAsTags.length; i++){
+                    let tag = todasAsTags[i]
+            
+                    if (tag.nodeName == 'A') {
+                        tag.style.backgroundColor = 'black'
+                        tag.style.color = 'white'
+                    }else {
+                        tag.style.backgroundColor = 'white'
+                        tag.style.color = 'black'
+                    }
+                }
+            })
+        }
+        
+        //contraste preto
+        var link_contraste_preto = document.querySelector('#contraste_preto')
+        var todasAsTags = document.querySelectorAll('*')
+        if (link_contraste_preto != null){
+            link_contraste_preto.addEventListener('click', function (){
+                console.log(todasAsTags);
+                for(let i = 0; i< todasAsTags.length; i++){
+                    let tag = todasAsTags[i]
+            
+                    if (tag.nodeName == 'A'){
+                        tag.style.backgroundColor = 'white'
+                        tag.style.color = 'black'
+                    }else{
+                        tag.style.backgroundColor = 'black'
+                        tag.style.color = 'white'
+                    }
+                }
+            })
+        }
+            </script>
+</body>

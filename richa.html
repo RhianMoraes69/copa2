@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NEYMAR JR</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="Ney">
+    <button onclick="diminuir()">A-</button>
+    <button onclick="aumentar()">A+</button>
+    <a href="brasil.html"><button>VOLTAR</button></a>
+    <div class="container clearfix">
+        <div class="col-6" >
+            <br><br><br>             
+            <img src="img/richarlison.jpg" width="325px">
+        </div>
+        <div class="col-6" id="colim">
+               <BR><BR>
+               <h2>ESTATISTICAS:</h2>
+               <BR>
+               <ul>IDADE : 11001 ANOS  </ul>
+               <ul>ALTURA : 10111000 CENTIMETROS </ul>
+               <ul>JOGOS : 100101011 PARTIDAS </ul>
+               <ul>GOLS : 1011000  GOLS </ul>
+               <ul>ASSISTENCIAS : 100000 ASSIST </ul>
+               <ul>GOLS PELA SELEÇÃO : 10011  </ul>
+               <ul>NUMEROS DE TITULOS : 100 </ul>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+            tamanho = 16;
+    function diminuir(){
+      tamanho--;
+      document.body.style.fontSize=tamanho+"px";
+    }
+    function aumentar(){
+      tamanho++;
+      document.body.style.fontSize=tamanho+"px";
+    }
+    
+    
+    var link_contraste_branco = document.querySelector('#contraste_branco')
+    var todasAsTags = document.querySelectorAll('*')
+    
+    if (link_contraste_branco != null){
+        link_contraste_branco.addEventListener('click', function(){
+            console.log(todasAsTags);
+            for(let i = 0; i< todasAsTags.length; i++){
+                let tag = todasAsTags[i]
+        
+                if (tag.nodeName == 'A') {
+                    tag.style.backgroundColor = 'black'
+                    tag.style.color = 'white'
+                }else {
+                    tag.style.backgroundColor = 'white'
+                    tag.style.color = 'black'
+                }
+            }
+        })
+    }
+    
+    //contraste preto
+    var link_contraste_preto = document.querySelector('#contraste_preto')
+    var todasAsTags = document.querySelectorAll('*')
+    if (link_contraste_preto != null){
+        link_contraste_preto.addEventListener('click', function (){
+            console.log(todasAsTags);
+            for(let i = 0; i< todasAsTags.length; i++){
+                let tag = todasAsTags[i]
+        
+                if (tag.nodeName == 'A'){
+                    tag.style.backgroundColor = 'white'
+                    tag.style.color = 'black'
+                }else{
+                    tag.style.backgroundColor = 'black'
+                    tag.style.color = 'white'
+                }
+            }
+        })
+    }
+        </script>
+</body>

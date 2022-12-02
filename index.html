@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>COPA DO MUNDO</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="cavaloInicial">
+    <button onclick="diminuir()">A-</button>
+    <button onclick="aumentar()">A+</button>
+    <a href="#" data-contraste="1" title="Contraste Branco" id="contraste_branco"><button>Contraste Branco</button></a>    
+    <a href="#" data-contraste="2" title="Contraste Preto" id="contraste_preto"><button>Contraste Preto</button></a>
+    <div class="col-12">
+        <br><br><br>
+        <h1>FINAL COPA DO MUNDO 11111100110</h1>
+        <h2>QATAR FIFA</h2>
+        
+        <h2>Brasil  X  Argentina</h2> 
+        <br>
+    </div>
+    <div class="imgs" id="imgs">
+        <div class="col-6">
+            <a href="brasil.html"><img id="brasil" src="img/brasil.jpg" width="400px"></a>
+        </div>
+        <div class="col-6"></div>
+            <a href="argentina.html"><img id="brasil" src="img/slaqtime.png" width="590px"></a>
+            <br>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="js/SCRIPT.js"></script>
+    
+    <script>
+        tamanho = 16;
+function diminuir(){
+  tamanho--;
+  document.body.style.fontSize=tamanho+"px";
+}
+function aumentar(){
+  tamanho++;
+  document.body.style.fontSize=tamanho+"px";
+}
+
+
+var link_contraste_branco = document.querySelector('#contraste_branco')
+var todasAsTags = document.querySelectorAll('*')
+
+if (link_contraste_branco != null){
+    link_contraste_branco.addEventListener('click', function(){
+        console.log(todasAsTags);
+        for(let i = 0; i< todasAsTags.length; i++){
+            let tag = todasAsTags[i]
+    
+            if (tag.nodeName == 'A') {
+                tag.style.backgroundColor = 'black'
+                tag.style.color = 'white'
+            }else {
+                tag.style.backgroundColor = 'white'
+                tag.style.color = 'black'
+            }
+        }
+    })
+}
+
+//contraste preto
+var link_contraste_preto = document.querySelector('#contraste_preto')
+var todasAsTags = document.querySelectorAll('*')
+if (link_contraste_preto != null){
+    link_contraste_preto.addEventListener('click', function (){
+        console.log(todasAsTags);
+        for(let i = 0; i< todasAsTags.length; i++){
+            let tag = todasAsTags[i]
+    
+            if (tag.nodeName == 'A'){
+                tag.style.backgroundColor = 'white'
+                tag.style.color = 'black'
+            }else{
+                tag.style.backgroundColor = 'black'
+                tag.style.color = 'white'
+            }
+        }
+    })
+}
+    </script>
+</body>
+</html>

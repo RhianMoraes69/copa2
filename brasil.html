@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TIME DO BRASIL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="BRASIL">
+    <a href="#" data-contraste="1" title="Contraste Branco" id="contraste_branco"><button>Contraste Branco</button></a>    
+    <a href="#" data-contraste="2" title="Contraste Preto" id="contraste_preto"><button>Contraste Preto</button></a>
+    <button onclick="diminuir()">A-</button>
+    <button onclick="aumentar()">A+</button>
+    <a href="index.html"><button>VOLTAR</button></a>
+    <div class="col-12" id="bras">
+        <h1> SELEÇÃO BRASILEIRA </h1>
+        <a href="ney.html"><img id="neymar" src="img/neymar.jpg" width="249.5px"></a>
+        <a href="vini.html"><img id="vini" src="img/vini.jpg" width="250px"></a>
+        <a href="antony.html"><img id="antony" src="img/antony.jpg" width="245px"></a>
+        <a href="richa.html"><img id="richarlison" src="img/richarlison.jpg" width="246px"></a>
+        <a href="paqueta.html"><img id="paqueta" src="img/paqueta.jpg" width="241px"></a>
+        <a href="fabinho.html"><img id="fabinho" src="img/fabinho.jpg" width="257px"></a>
+    </div>
+    <div class="col-12">
+            <a href="case.html"><img id="case" src="img/case.jpg" width="250px"></a>
+            <a href="militao.html"><img id="militao" src="img/militao.jpg" width="252px"></a>
+            <a href="silva.html"><img id="silva" src="img/silva.jpg" width="254px"></a>
+            <a href="marq.html"><img id="marquinhosjpg" src="img/marquinhosjpg.jpg" width="251px"></a>
+            <a href="alisson.html"><img id="alisson" src="img/alisson.jpg" width="253px"></a>
+        </div>
+        <script src="js/SCRIPT.js"></script>
+        <script>
+                tamanho = 16;
+        function diminuir(){
+          tamanho--;
+          document.body.style.fontSize=tamanho+"px";
+        }
+        function aumentar(){
+          tamanho++;
+          document.body.style.fontSize=tamanho+"px";
+        }
+        
+        
+        var link_contraste_branco = document.querySelector('#contraste_branco')
+        var todasAsTags = document.querySelectorAll('*')
+        
+        if (link_contraste_branco != null){
+            link_contraste_branco.addEventListener('click', function(){
+                console.log(todasAsTags);
+                for(let i = 0; i< todasAsTags.length; i++){
+                    let tag = todasAsTags[i]
+            
+                    if (tag.nodeName == 'A') {
+                        tag.style.backgroundColor = 'black'
+                        tag.style.color = 'white'
+                    }else {
+                        tag.style.backgroundColor = 'white'
+                        tag.style.color = 'black'
+                    }
+                }
+            })
+        }
+        
+        //contraste preto
+        var link_contraste_preto = document.querySelector('#contraste_preto')
+        var todasAsTags = document.querySelectorAll('*')
+        if (link_contraste_preto != null){
+            link_contraste_preto.addEventListener('click', function (){
+                console.log(todasAsTags);
+                for(let i = 0; i< todasAsTags.length; i++){
+                    let tag = todasAsTags[i]
+            
+                    if (tag.nodeName == 'A'){
+                        tag.style.backgroundColor = 'white'
+                        tag.style.color = 'black'
+                    }else{
+                        tag.style.backgroundColor = 'black'
+                        tag.style.color = 'white'
+                    }
+                }
+            })
+        }
+            </script>
+
+</body>
